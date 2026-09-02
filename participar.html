@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios y Reservas | NutriVida</title>
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">NutriVida.</div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">La Clínica</a>
+            <a href="participar.html" class="active">Servicios</a>
+        </nav>
+        <a href="agenda.html" class="btn-primary">Portal Privado</a>
+    </header>
+
+    <section class="services page-section">
+        <h2 class="section-title">Agendar Prestación</h2>
+        <p style="text-align: center; margin-bottom: 3rem; color: #666;">Selecciona el servicio que necesitas e inicia tu proceso de reserva digital.</p>
+        
+        <div class="grid">
+            <!-- Servicio 1 -->
+            <div class="card">
+                <h3>Consulta Especialidad</h3>
+                <p>Evaluación inicial, diagnóstico y pauta alimenticia general.</p>
+                <br>
+                <button class="btn-solid add-to-cart" data-servicio="Consulta Especialidad">Seleccionar</button>
+            </div>
+            <!-- Servicio 2 -->
+            <div class="card">
+                <h3>Plan Metabólico (1 Mes)</h3>
+                <p>Seguimiento semanal para control de resistencia a la insulina.</p>
+                <br>
+                <button class="btn-solid add-to-cart" data-servicio="Plan Metabólico">Seleccionar</button>
+            </div>
+            <!-- Servicio 3 -->
+            <div class="card">
+                <h3>Evaluación Antropométrica</h3>
+                <p>Medición de pliegues y porcentaje de grasa corporal en box.</p>
+                <br>
+                <button class="btn-solid add-to-cart" data-servicio="Evaluación Antropométrica">Seleccionar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resumen de Reserva (Simulación de carrito) -->
+    <section class="booking-summary" id="resumen-reserva" style="display: none; padding: 4rem; background: #111; color: #fff;">
+        <h3 style="font-family: 'Playfair Display', serif; margin-bottom: 1rem;">Tu Selección</h3>
+        <p id="servicio-seleccionado">Ningún servicio seleccionado.</p>
+        <br>
+        <a href="confirmacion.html" class="btn-action outline" style="border-color: #fff; color: #fff;">Confirmar y Agendar</a>
+    </section>
+
+    <script src="assets/js/app.js"></script>
+</body>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Diaria | NutriVida</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <style>
+        :root { --dark-bg: #0a0a0a; --dark-surface: #1a1a1a; --text-light: #ffffff; --text-muted: #888888; --border-dark: #333333; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { display: flex; height: 100vh; background-color: #f4f4f4; color: #111; }
+        
+        /* Sidebar */
+        .sidebar { width: 260px; background-color: var(--dark-bg); color: var(--text-light); display: flex; flex-direction: column; border-right: 1px solid var(--border-dark); }
+        .sidebar-header { padding: 2rem; font-family: 'Playfair Display', serif; font-size: 1.5rem; border-bottom: 1px solid var(--border-dark); letter-spacing: 1px; }
+        .nav-links { display: flex; flex-direction: column; flex: 1; padding: 2rem 0; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; padding: 1rem 2rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; border-left: 3px solid transparent; transition: 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--text-light); background-color: var(--dark-surface); border-left: 3px solid var(--text-light); }
+        
+        /* Main Content */
+        .main-content { flex: 1; padding: 3rem; overflow-y: auto; }
+        .dashboard-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; border-bottom: 2px solid #000; padding-bottom: 1rem; }
+        .dashboard-header h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; }
+        
+        /* Tablas Boxy */
+        .data-panel { background: #fff; border: 1px solid #000; padding: 0; box-shadow: 4px 4px 0px #000; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 1.2rem; text-align: left; border-bottom: 1px solid #eee; }
+        th { background-color: #fafafa; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #000; }
+        
+        .status { padding: 0.3rem 0.8rem; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; border: 1px solid #000; }
+        .status.pending { background-color: #fff; color: #000; }
+        .status.completed { background-color: #000; color: #fff; }
+        
+        .btn-outline { border: 1px solid #000; background: transparent; padding: 0.5rem 1rem; cursor: pointer; font-size: 0.8rem; text-transform: uppercase; font-weight: 600; }
+        .btn-outline:hover { background: #000; color: #fff; }
+    </style>
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="sidebar-header">NutriVida.</div>
+        <nav class="nav-links">
+            <a href="./admin.html">Métricas Generales</a>
+            <a href="./agenda.html" class="active">Agenda Diaria</a>
+            <a href="./fichas.html">Fichas de Progreso</a>
+            <a href="#">Servicios y Planes</a>
+        </nav>
+        <div style="padding: 2rem;">
+            <a href="./login.html" style="color: #666; text-decoration: none; font-size: 0.8rem;">Cerrar Sesión</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="dashboard-header">
+            <div>
+                <p style="text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; color: #666;">Hoy: 12 de Junio</p>
+                <h1>Agenda de Consultas</h1>
+            </div>
+        </header>
+
+        <section class="data-panel">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hora</th>
+                        <th>Paciente</th>
+                        <th>Servicio</th>
+                        <th>Estado</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09:00 AM</td>
+                        <td>Javier Arriagada</td>
+                        <td>Consulta Especialidad</td>
+                        <td><span class="status pending">Pendiente</span></td>
+                        <td><button class="btn-outline">Atender</button></td>
+                    </tr>
+                    <tr>
+                        <td>10:30 AM</td>
+                        <td>María Constanza</td>
+                        <td>Plan de Tratamiento</td>
+                        <td><span class="status completed">Atendido</span></td>
+                        <td><button class="btn-outline">Ver Ficha</button></td>
+                    </tr>
+                    <tr>
+                        <td>12:00 PM</td>
+                        <td>Valentín Duclos</td>
+                        <td>Evaluación Clínica</td>
+                        <td><span class="status pending">Pendiente</span></td>
+                        <td><button class="btn-outline">Atender</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+</body>
+</html>
