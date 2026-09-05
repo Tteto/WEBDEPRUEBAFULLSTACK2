@@ -1,9 +1,10 @@
 /* Variables y Configuración Base */
 :root {
-    --bg-color: #FAFAFA;
-    --text-color: #111111;
-    --border-color: #E0E0E0;
-    --accent-color: #000000;
+    --bg-color: #FFFFFF;
+    --text-color: #334155;
+    --border-color: #E2E8F0;
+    --accent-color: #3182CE; /* Azul "médico"*/
+    --light-blue: #F0F6FB;   /* Azul claro */
 }
 
 * {
@@ -24,7 +25,18 @@ h1, h2, h3, .logo {
     font-weight: 600;
 }
 
+/* Top Bar Oscura */
+.top-bar {
+    background-color: #1a2b3c; 
+    color: #ffffff;            
+    text-align: center;        
+    padding: 10px 0;           
+    font-size: 0.9rem;         
+    width: 100%;               
+}
+
 /* Navbar */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -35,7 +47,7 @@ h1, h2, h3, .logo {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     letter-spacing: -0.5px;
 }
 
@@ -70,6 +82,22 @@ h1, h2, h3, .logo {
 }
 
 /* Hero Section */
+/* Diseño de Fonasa/Isapre */
+.tag-convenios {
+    display: inline-block;
+    background-color: #E6FFFA;     
+    color: #2C7A7B;                 /* letras */
+    padding: 4px 12px;             
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-bottom: 1rem;            /* Espacio para separarlo del título */
+    border-left: 3px solid #319795; /* La rayita de color a la izquierda */
+    border-radius: 0 4px 4px 0;     /* Redondea solo las esquinas derechas */
+}
+.texto-azul {
+    color: var(--accent-color);     /*  */
+}
+
 .hero {
     display: flex;
     height: 80vh;
@@ -100,10 +128,9 @@ h1, h2, h3, .logo {
 
 .hero-image {
     flex: 1;
-    background-color: #eaeaea; /* Fallback si no hay foto */
+    background-color: #eaeaea;
     background-size: cover;
     background-position: center;
-    filter: grayscale(100%) contrast(1.1); /* Toque estético */
 }
 
 /* Services Grid */
@@ -260,4 +287,43 @@ h1, h2, h3, .logo {
 
 .card:hover .card-img {
     filter: grayscale(0%); /* La foto recupera su color al pasar el mouse */
+}
+
+/* Footer */
+.footer {
+    background-color: var(--light-blue); 
+    color: #334155;            
+    padding: 60px 4rem 20px 4rem; 
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px; 
+    margin-bottom: 40px; 
+}
+
+.footer-col h4 {
+    color: #0F172A;      
+    margin-bottom: 15px; 
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.footer-col ul {
+    list-style: none; 
+}
+
+.footer-col ul li, .footer-col ul li a {
+    color: #475569;        
+    text-decoration: none; 
+    margin-bottom: 10px;   
+    font-size: 0.95rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color); 
+    font-size: 0.85rem;
 }
