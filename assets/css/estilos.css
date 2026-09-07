@@ -327,3 +327,54 @@ h1, h2, h3, .logo {
     border-top: 1px solid var(--border-color); 
     font-size: 0.85rem;
 }
+
+
+
+/* =====================
+   FORMULARIO CONTACTO 
+   =====================*/
+.formulario-contenedor {
+  max-width: 650px;
+  margin: 50px auto;
+}
+
+.campo {
+  margin-bottom: 18px;
+}
+
+.campo label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #111;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #bbbbbb;
+  border-radius: 7px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  outline: 2px solid #3182ce; /* Azul de NutriVida */
+  border-color: transparent;
+}
+
+.error {
+  min-height: 20px;
+  display: block;
+  margin-top: 4px;
+  color: #a31515; /* Error */
+  font-size: 0.9rem;
+}
+
+.mensaje {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #111;
+}

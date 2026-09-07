@@ -20,7 +20,7 @@
             <a href="./participar.html">SERVICIOS</a>
             <a href="./noticias.html">ARTÍCULOS</a>
         </nav>
-        <a href="./login.html" class="btn-primary">Portal Privado</a>
+        <button class="btn-primary" onclick="mostrarLogin()">Portal Privado</button>
     </header>
 
     <section class="hero">
@@ -59,6 +59,51 @@
         </div>
     </section>
 
+    <!-- ========================================== -->
+    <!-- SECCIÓN DE CONTACTO -->
+    <!-- ========================================== -->
+    <section class="formulario-contenedor">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 25px; color: #111;">Contacto</h2>
+        
+        <form id="form-contacto" novalidate>
+            <div class="campo">
+                <label for="nombre-contacto">Nombre</label>
+                <input type="text" id="nombre-contacto" maxlength="100" placeholder="Ingrese su nombre">
+                <small id="error-nombre-contacto" class="error"></small>
+            </div>
+
+            <div class="campo">
+                <label for="correo-contacto">Correo electrónico</label>
+                <input type="email" id="correo-contacto" maxlength="100" placeholder="nombre@gmail.com">
+                <small id="error-correo-contacto" class="error"></small>
+            </div>
+
+            <div class="campo">
+                <label for="comentario-contacto">Comentario</label>
+                <textarea id="comentario-contacto" maxlength="500" rows="5" placeholder="Escriba su mensaje"></textarea>
+                <small id="error-comentario-contacto" class="error"></small>
+            </div>
+
+            <button type="submit" style="background-color: #3182ce; color: white; border: none; padding: 12px 24px; border-radius: 7px; font-weight: bold; cursor: pointer; font-size: 1rem;">Enviar mensaje</button>
+            <p id="mensaje-contacto" class="mensaje"></p>
+        </form>
+    </section>
+
+
+    <!-- Modal de Inicio de Sesión -->
+<div id="modal-login" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index: 1000; justify-content:center; align-items:center;">
+    <div style="background:#fff; padding:2.5rem; border-radius:8px; width:350px; text-align: center;">
+        <h2 style="font-family: 'Playfair Display', serif; margin-bottom: 1.5rem;">INICIO DE SESIÓN</h2>
+        
+        <input type="email" id="correo-login" placeholder="nombre@correo.cl" style="width:100%; margin-bottom:15px; padding:10px; border:1px solid #ccc;">
+        
+        <input type="password" id="pass-login" placeholder="Contraseña" style="width:100%; margin-bottom:20px; padding:10px; border:1px solid #ccc;">
+        
+        <button onclick="validarUsuario()" style="width:100%; padding:10px; background:#2C7A7B; color:white; border:none; cursor:pointer; margin-bottom:10px; font-weight: bold;">INGRESAR</button>
+        <button onclick="cerrarLogin()" style="width:100%; padding:10px; background:transparent; border:1px solid #ccc; cursor:pointer;">CANCELAR</button>
+    </div>
+</div>
+
     <footer class="footer">
         <div class="footer-grid">
             <!-- Columna 1 -->
@@ -70,7 +115,7 @@
                 </div>
                 <p style="margin-top: 15px; font-size: 0.9rem; line-height: 1.5;">
         Clínica de nutrición dedicada a tu salud y bienestar.<br>
-        No dude en contactarnos y empezar ese cambio <br>que siempre ha querido, esta es tu oportunidad.<br><br>
+        No dude en contactarnos y empezar ese cambio <br>que siempre ha querido, esta es su oportunidad.<br><br>
         "Mañana será un buen día".
     </p>
             </div>
@@ -111,5 +156,9 @@
             <p>© 2026 NutriVida · DSY1104 — Todos los derechos reservados</p>
         </div>
     </footer>
+
+    <!-- Aquí conectamos el JavaScript -->
+    <script src="assets/js/app.js"></script>
+
 </body>
 </html>
